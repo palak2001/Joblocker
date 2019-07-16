@@ -1,4 +1,5 @@
 const mongoose= require('mongoose');
+const Joi = require('joi');
 
 const vacancySchema={
     SchoolName: {
@@ -18,6 +19,18 @@ const vacancySchema={
     }
 }
 
+function vacancyValidation(vacancy){
+    const schema={
+        SchoolName: Joi.string().minlength(3).required(),
+        Subject: Joi.string().required(),
+        Classes: Joi.array(),
+        Qualification: Joi.array()
+    };
+
+    return Joi.validate(vacancy,schema);
+}
+
 const Vacancy= mongoose.model('Vacancy',vacancySchema);
 
-exports.module=Vacancy;
+exports.Vacancy=Vacancy;
+exports.vacancyValidation= vacancyValidation;
