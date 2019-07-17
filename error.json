@@ -1,0 +1,58 @@
+//data
+{
+	"School":{
+		"name" : "Sacred Heart Convent School",
+		"address" : "chahal chowk",
+		"email" : "palak.mittal.2908@gmail.com"
+	},
+	"Subject": "English",
+	"Classes": "2",
+	"Qualification": "MA"
+}
+
+//error
+{
+    "error": {
+        "isJoi": true,
+        "name": "ValidationError",
+        "details": [
+            {
+                "message": "\"School\" is not allowed",
+                "path": [
+                    "School"
+                ],
+                "type": "object.allowUnknown",
+                "context": {
+                    "child": "School",
+                    "value": {
+                        "name": "Sacred Heart Convent School",
+                        "address": "chahal chowk",
+                        "email": "palak.mittal.2908@gmail.com"
+                    },
+                    "key": "School",
+                    "label": "School"
+                }
+            }
+        ],
+        "_object": {
+            "School": {
+                "name": "Sacred Heart Convent School",
+                "address": "chahal chowk",
+                "email": "palak.mittal.2908@gmail.com"
+            },
+            "Subject": "English",
+            "Classes": "2",
+            "Qualification": "MA"
+        }
+    },
+    "value": {
+        "School": {
+            "name": "Sacred Heart Convent School",
+            "address": "chahal chowk",
+            "email": "palak.mittal.2908@gmail.com"
+        },
+        "Subject": "English",
+        "Classes": 2,
+        "Qualification": "MA"
+    }
+}

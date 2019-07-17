@@ -1,30 +1,30 @@
 const mongoose= require('mongoose');
 const Joi = require('joi');
+const {schoolSchema} = require('./school.js');
 
 const vacancySchema={
-    SchoolName: {
-        type: String,
-        required: true,
-        minlength: 3,
+    School: {
+        type: schoolSchema,
+        required: true
     },
     Subject: {
         type: String,
         required: true,
     },
     Classes: {
-        type: [Number]
+        type: Number
     },
     Qualification:{
-        type: [String]
+        type: String
     }
 }
 
 function vacancyValidation(vacancy){
     const schema={
-        SchoolName: Joi.string().minlength(3).required(),
+        SchoolId: Joi.string().min(3),
         Subject: Joi.string().required(),
-        Classes: Joi.array(),
-        Qualification: Joi.array()
+        Classes: Joi.number(),
+        Qualification: Joi.string()
     };
 
     return Joi.validate(vacancy,schema);
