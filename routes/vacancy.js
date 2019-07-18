@@ -16,11 +16,11 @@ router.get('/:id', async (req,res) =>{
 });
 
 router.post('/', async (req,res) =>{
-    const error= vacancyValidation(req.body);
+    const {error}= vacancyValidation(req.body);
     if(error) return res.status(400).send(error);
 
     const school= await School.findById(req.params.schoolId);
-    if(!school) return res.status(404).send(error);
+    if(!school) return res.status(404).send('Invalid school reference');
 
     let vacancy= new Vacancy({
         School: {

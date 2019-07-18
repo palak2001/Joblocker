@@ -1,6 +1,7 @@
 const mongoose= require('mongoose');
 const Joi = require('joi');
 const {schoolSchema} = require('./school.js');
+Joi.objectId = require('joi-objectid')(Joi);
 
 const vacancySchema={
     School: {
@@ -21,7 +22,7 @@ const vacancySchema={
 
 function vacancyValidation(vacancy){
     const schema={
-        SchoolId: Joi.string().min(3),
+        schoolId: Joi.string().required(),
         Subject: Joi.string().required(),
         Classes: Joi.number(),
         Qualification: Joi.string()

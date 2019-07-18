@@ -15,12 +15,12 @@ router.get('/:id', async (req,res) =>{
 });
 
 router.post('/', async (req,res) =>{
-    const error= schoolValidation(req.body);
+    const {error}= schoolValidation(req.body);
     if(error) return res.status(400).send(error);
     let school= new School({
         name: req.body.name,
         address: req.body.address,
-        email: req.email
+        email: req.body.email
     });
     school= await school.save()
     res.send(school);

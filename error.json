@@ -1,58 +1,42 @@
 //data
 {
 	"School":{
-		"name" : "Sacred Heart Convent School",
-		"address" : "chahal chowk",
+		"name" : "Sacred",
+		"address" : "chahal",
 		"email" : "palak.mittal.2908@gmail.com"
 	},
 	"Subject": "English",
 	"Classes": "2",
 	"Qualification": "MA"
 }
+//chat 
 
+ispe kuchh bhi bst kr skti...this file is useless:P oh
 //error
 {
-    "error": {
-        "isJoi": true,
-        "name": "ValidationError",
-        "details": [
-            {
-                "message": "\"School\" is not allowed",
-                "path": [
-                    "School"
-                ],
-                "type": "object.allowUnknown",
-                "context": {
-                    "child": "School",
-                    "value": {
-                        "name": "Sacred Heart Convent School",
-                        "address": "chahal chowk",
-                        "email": "palak.mittal.2908@gmail.com"
-                    },
-                    "key": "School",
-                    "label": "School"
-                }
+    "isJoi": true,
+    "name": "ValidationError",
+    "details": [
+        {
+            "message": "\"schoolId\" is required",
+            "path": [
+                "schoolId"
+            ],
+            "type": "any.required",
+            "context": {
+                "key": "schoolId",
+                "label": "schoolId"
             }
-        ],
-        "_object": {
-            "School": {
-                "name": "Sacred Heart Convent School",
-                "address": "chahal chowk",
-                "email": "palak.mittal.2908@gmail.com"
-            },
-            "Subject": "English",
-            "Classes": "2",
-            "Qualification": "MA"
         }
-    },
-    "value": {
+    ],
+    "_object": {
         "School": {
-            "name": "Sacred Heart Convent School",
-            "address": "chahal chowk",
+            "name": "Sacred",
+            "address": "chahal",
             "email": "palak.mittal.2908@gmail.com"
         },
         "Subject": "English",
-        "Classes": 2,
+        "Classes": "2",
         "Qualification": "MA"
     }
 }

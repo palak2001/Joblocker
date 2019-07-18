@@ -1,7 +1,9 @@
 const mongoose= require('mongoose');
 const Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
 
 const schoolSchema={
+    schoolId: Joi.objectId,
     name:{
         type: String,
         required: true,
